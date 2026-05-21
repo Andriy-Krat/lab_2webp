@@ -3,49 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <title>CV - Andriy Krat</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>ANDRIY KRAT</h1>
-        <p>Location: Lviv, Ukraine | Phone: +380956582655</p>
-        <p>Email: <a href="mailto:andrii.krat.kb.2023@lpnu.ua">andrii.krat.kb.2023@lpnu.ua</a></p>
-    </header>
+    <div id="contact-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <h2>Зворотний зв'язок</h2>
+            <form action="https://formspree.io/f/mbdbgkve" method="POST">
+                <label>Ім'я:</label>
+                <input type="text" name="name" required>
+                
+                <label>Email:</label>
+                <input type="email" name="email" required>
+                
+                <label>Номер телефону:</label>
+                <input type="tel" name="phone" required>
+                
+                <label>Повідомлення:</label>
+                <textarea name="message" rows="3" required></textarea>
+                
+                <button type="submit" class="submit-btn">Відправити</button>
+            </form>
+        </div>
+    </div>
 
-    <main>
-        <section>
-            <h2>SUMMARY</h2>
-            <p>I am a motivated IT student looking for a position as a Junior Information Systems Auditor. I have a strong foundation in computer systems architecture, networking, and technical information protection.</p>
-        </section>
+    <div class="resume-container">
+        <header id="header-section">
+            <button id="theme-toggle" class="theme-btn">Змінити тему</button>
+            
+            <h1>ANDRIY KRAT</h1>
+            <p class="subtitle">Cybersecurity Student</p>
+            <div class="contact-info">
+                <p>Location: Lviv, Ukraine | Phone: +380956582655</p>
+                <p>Email: <a href="mailto:andrii.krat.kb.2023@lpnu.ua">andrii.krat.kb.2023@lpnu.ua</a></p>
+            </div>
+        </header>
 
-        <section>
-            <h2>SKILLS</h2>
-            <ul>
-                <li><strong>IT Audit & Security:</strong> IT Risk Assessment, Information Protection, Database Security, ISO 27001 (Familiarity), ITIL Principles, Information Security Audit.</li>
-                <li><strong>Infrastructure & Networks:</strong> Network Security, Computer Systems Architecture, Linux environments.</li>
-                <li><strong>Cybersecurity Tools:</strong> Kali Linux, Wireshark, and Cisco Packet Tracer.</li>
-            </ul>
-        </section>
+        <main id="main-content">
+            <div class="left-column">
+                <section class="resume-section">
+                    <h2>SUMMARY</h2>
+                    <p>I am a motivated IT student looking for a position as a Junior Information Systems Auditor. I have a strong foundation in computer systems architecture, networking, and technical information protection.</p>
+                </section>
 
-        <section>
-            <h2>EDUCATION & CERTIFICATION</h2>
-            <h3>Lviv Polytechnic National University</h3>
-            <p>Bachelor's Degree in Cybersecurity and Information Protection | Expected Graduation: 2027</p>
-            <h3>Lviv IT Cluster</h3>
-            <p>Startup School Graduate (Certificate)</p>
-        </section>
+                <section class="resume-section">
+                    <h2>EDUCATION</h2>
+                    <h3>Lviv Polytechnic National University</h3>
+                    <p>Bachelor's Degree in Cybersecurity | Expected: 2027</p>
+                    <h3>Lviv IT Cluster</h3>
+                    <p>Startup School Graduate (Certificate)</p>
+                </section>
+            </div>
 
-        <section>
-            <h2>ACADEMIC & PERSONAL PROJECTS</h2>
-            <ul>
-                <li>Computer Systems Architecture Analysis | Academic Term Paper</li>
-                <li>Computer Networks Design & Security | Academic Term Paper</li>
-                <li>Database & Knowledge Base Architecture | Academic Term Paper</li>
-            </ul>
-        </section>
-    </main>
+            <div class="right-column">
+                <section class="resume-section">
+                    <h2>SKILLS</h2>
+                    <ul class="skills-list">
+                        <li><strong>IT Audit & Security:</strong> IT Risk Assessment, Information Protection, Database Security, ISO 27001, ITIL.</li>
+                        <li><strong>Infrastructure & Networks:</strong> Network Security, Computer Systems Architecture, Linux environments.</li>
+                        <li><strong>Cybersecurity Tools:</strong> Kali Linux, Wireshark, and Cisco Packet Tracer.</li>
+                    </ul>
+                </section>
 
-    <footer>
-        <p>2026 Andriy Krat. All rights reserved.</p>
-    </footer>
+                <section class="resume-section">
+                    <h2>REVIEWS</h2>
+                    <div id="reviews-list">
+                        </div>
+                </section>
+            </div>
+        </main>
+        
+        <footer id="footer-section">
+            <div id="sys-info"></div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
